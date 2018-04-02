@@ -8,13 +8,22 @@
         <div>
             <router-view></router-view>
         </div>
+        <button @click="increment">Add2 1</button>
+        <div>{{count}}</div>
+        <div>-</div>
     </div>
 </template>
 <script>
     module.exports = {
         data:function(){
             return {
-                title:"APP.VUE"
+                title:"APP.VUE",
+                count:0
+            }
+        },
+        methods:{
+            increment(){
+                this.count++
             }
         }
     }
