@@ -38,6 +38,12 @@ const rules = [
     },{
         test:/\.(ttf|woff|woff2)$/,
         use:"url-loader"
+    },{
+        test:/\.css$/,
+        use:ExtractTextWebpackPlugin.extract({
+            fallback:"vue-style-loader",
+            use:["css-loader","postcss-loader"]
+        })
     }
 ]
 const resolve = {

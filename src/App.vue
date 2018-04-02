@@ -8,9 +8,9 @@
         <div>
             <router-view></router-view>
         </div>
-        <button @click="increment">Add2 1</button>
+        <el-button type="primary" @click="increment">加法</el-button>
         <div>{{count}}</div>
-        <div>-</div>
+        <el-button type="primary" @click="decrement">减法</el-button>
     </div>
 </template>
 <script>
@@ -24,6 +24,9 @@
         methods:{
             increment(){
                 this.count++
+            },
+            decrement(){
+                this.count--
             }
         }
     }
